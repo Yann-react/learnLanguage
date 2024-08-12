@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  db_multitalk:
+    container_name: db_multitalk
+    image: postgres:12
+    restart: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: db_multitalk
+    ports:
+      - 5433:5433
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata: {}

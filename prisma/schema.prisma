@@ -1,0 +1,73 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  auth_id   String @unique
+  fullName  String
+  email     String
+  password String   
+  nativeLang   Language @default(FRENCH)
+  story         Story[]
+  chat Chat[]
+  message Message[]
+
+}
+model Story {
+  id        Int      @id @default(autoincrement())
+  name   String @unique
+  description  String
+  initialPrompt     String   
+  baseLanguage   Language
+  targetLanguage   Language
+  createdAt   DateTime @default(now())
+  user             User   @relation(fields: [userId], references: [id])
+  userId           Int
+  chat Chat[]
+}
+model Chat {
+  id        Int      @id @default(autoincrement())
+  resumePrompt String
+  status Status @default(IN_PROGRESS)
+  createdAt DateTime @default(now())
+  tokenNumber Int
+  message Message[]
+  story Story @relation(fields: [storyId],references: [id])
+  storyId   Int 
+  user             User   @relation(fields: [userId], references: [id])
+  userId           Int
+}
+model Message {
+  id        Int      @id @default(autoincrement())
+  contentUser   String
+  contentSystem   String
+  createdAt   DateTime @default(now())
+  chat Chat @relation(fields: [chatId],references: [id])
+  chatId   Int 
+  user             User   @relation(fields: [userId], references: [id])
+  userId           Int
+
+}
+enum Language {
+  FRENCH
+  SPANISH
+  ENGLISH
+  JAPON
+}
+enum Status {
+  IN_PROGRESS
+  ENDED
+  CLOSED
+}

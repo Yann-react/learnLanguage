@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "multitalk25",
+  "private_key_id": "4f5fbb9de41c207adf6ab6a1f4440bd786db8349",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCg5MMjB6hPj8/w\nzak2jv311Zql2JZcVWJgGdro/NUfM6/xRhQ8sRO/EI5IOXujPJJ+wFtvMMMvlsxg\nsnr9jlK/53vn/8wQy7SPz08qBd1uAI1FqcPM9Ppss88DY7J5bXDPzEJff6J6N4Jy\ntzgfXv6RclhoOeBG462XvwcZL/MbKDptb0JjUEaICORwV/LX8VRhLgSQZhH5992E\nQvxLSFYA3Tjg+CObIsP0KMlw6ZJJcS/yTZ9njKJdPMWDxMQ+2zhaXfYe30OuzIGB\nA872rATx4aG/WtMF/zIJePl2E2xPHVITZ4g5Z7EOg39ZBSDsT7gsZeBQLXPKnUQ9\nayrL0RXdAgMBAAECggEAK3iDjLRl8lEt4qb+gCI0VbaH2SViwsHDGaoCro6ZWpvR\nfsPrddZ2OlpTxwnY8OrNvfdk/O7U3cfFop62gklw7C60GKPRU/xl5bEid30sLaty\ngA71Oyw5eSM/3G+UaiB6qXpLuJe4o4LZ+Pqt7DPzXgLiBg8VHLIpVeWkGlcNPRm8\nrMz+uIVl+Fcvd8IxpJgZnWcllk7QpkH/iDbQ+ieSkyVm6tIQivv3d5hLaQMZmCQV\nYXhTUmtCMlPK1Cd/wYJHey8r4g8HEm4kv6Ov/pZ7Sh0mQZA+wl16toCDQamJV22M\ngiCN7z8Hc7Xdi8aLatZMPBDoSnaF8BNEzHCKqy8qdQKBgQDRzQ2R21mf41MnMP8Q\n52aS3KngUyP72LvHNGpNXsJPnI7TnApTFq7CYKAdlnWxq8u8YvofN8f3rRRUlReO\nOjI55bwG04dUBJgAaCtW5mxB8do1I/r0EtFF10x0VfuzVRwlPIchrIdQOviwbQkH\n+lYFe3kT5+GWEj1JpBVZdkBcWwKBgQDEUrECurUxyWalC9qw8i3vdNyxupW9DkWA\nh0zyvqf9XCNXDeOo+arshJpH0SncQraA9+5NArIUc36E6dfRmIvGf4Ys3aBaKsXm\nwFSBdPfO5496ntZJwOgxVRI5p4UFi1kXrZ0g8KYL3O9fEaGEnp4B05eYTAjVxjya\nY1w4iUhMJwKBgQCVQw+eb7Jp4G9ueJtfSWJepgNuB3iYWu/tn8rpVLtlrHqo7mEi\nEAcxX1FK+5qsVw9R7hEJWMQ537eRHalulNTbACkvqhqjmckSsQn0f2cR26FlIT4P\nm7urtqs8MVgrlCe8Dj4NpRN37xyzWD+On3nH2LqhgN2ryTo1RDm0Nj8/9QKBgQCx\nxjN1xj4nnDlvgQGCM3r3F/p0kgHf1VmIXnyGX7DdEx8JSJF7xMFLNXRDThs60cpT\nlK7cW3GIZWEO2HXO3PTNRVLps7Ltk0frgQPEyndPi434OnbPCHj5mxBK1u/0qk99\nyn+7gU7K9UBo9R0uazenbcQba9agRcdBAnJS27V1BwKBgQCaKHyox3WiEREy0f2p\n3yOmGf34Yus58GTreOvwNpIC4TceI69cI4sWcBg/ALqcm50IprJ7mkc/+1PjwBD4\nhzDdfDb4ABRU7yMqsz/voZ+he8pezx+givob++4c91Yy4fvd//kKl6Fx+j/o/YOx\nynlFX8uIs1G0ydx1+/Ykvqlegg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-57cac@multitalk25.iam.gserviceaccount.com",
+  "client_id": "114996375728050819134",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-57cac%40multitalk25.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
