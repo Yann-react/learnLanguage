@@ -34,8 +34,40 @@ const createStory = async (req, res) => {
 
 const getAllStory = async (req, res) => {
   try {
-    const stories = await prisma.story.findMany({});
-    res.status(201).json(stories);
+    const { userId } = req.params;
+    if (!userId) {
+      return res
+        .status(400)
+        .json({ error: "veillez remplie tout les champs requis" });
+    }
+    const stories = await prisma.story.findMany({
+      where: {
+        userId: parseInt(userId)
+      }
+    });
+    console.log(parseInt(userId), stories)
+    res.status(201).json({stories: stories});
+  } catch (e) {
+    console.log(e);
+    res.status(500).json({ error: "Erreur serveur." });
+  }
+};
+
+const getStory = async (req, res) => {
+  try {
+    const { userId, storyId } = req.params;
+    if (!userId) {
+      return res
+        .status(400)
+        .json({ error: "veillez remplie tout les champs requis" });
+    }
+    const story = await prisma.story.findUnique({
+      where: {
+        id: parseInt(storyId),
+        userId: parseInt(userId)
+      }
+    });
+    res.status(201).json({story: story});
   } catch (e) {
     console.log(e);
     res.status(500).json({ error: "Erreur serveur." });
@@ -60,4 +92,5 @@ module.exports = {
   createStory,
   getAllStory,
   getInfoStory,
+  getStory
 };
