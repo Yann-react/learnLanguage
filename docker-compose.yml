@@ -1,5 +1,15 @@
 version: "3.8"
 services:
+  backend_multitalk:
+    container_name: backend_multitalk
+    image: backend_multitalk
+    build:
+      context: ./
+      dockerfile: dockerfile
+    ports:
+      - 3006:3006
+    environment:
+      - DATABASE_URL=postgresql://db_multitalk_user:zzqno2GPjatcd4mKRSQb3GqQl5FzqQnb@dpg-cqst1caj1k6c73fnmvkg-a.oregon-postgres.render.com/db_multitalk
   db_multitalk:
     container_name: db_multitalk
     image: postgres:12
