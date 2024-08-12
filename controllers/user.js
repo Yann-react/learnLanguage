@@ -26,7 +26,6 @@ const registerUser = async (req, res) => {
       password
     );
     const firebaseUser = userCredential.user;
-    console.log(firebaseUser.uid);
 
     const newUser = await prisma.user.create({
       data: {

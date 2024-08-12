@@ -86,6 +86,7 @@ const existenceChat = async (req, res) => {
 const conversation = async (req, res) => {
   try {
     const { chatId, userId } = req.params;
+    console.log(chatId, userId, "AAA")
 
     // Find the chat and associated story
     const chat = await prisma.chat.findFirst({

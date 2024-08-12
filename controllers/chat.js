@@ -6,11 +6,13 @@ const createChat = async (req, res) => {
   try {
     const { resumePrompt, tokenNumber } = req.body;
     const { storyId, userId } = req.params;
-    if ( !tokenNumber || !storyId || !userId) {
-      return res
-        .status(400)
-        .json({ error: "veillez remplie tout les champs requis" });
-    }
+    console.log(storyId, userId)
+    // if ( !tokenNumber || !storyId || !userId) {
+    //   return res
+    //     .status(400)
+    //     .json({ error: "veillez remplie tout les champs requis" });
+    // }
+    console.log(parseInt(storyId))
     const chat = await prisma.chat.create({
       data: {
         resumePrompt,
@@ -18,7 +20,7 @@ const createChat = async (req, res) => {
         storyId: parseInt(storyId),
         userId: parseInt(userId),
       },
-    });
+    });console.log(chat)
     res.json(chat)
   } catch (e) {
     console.log(e);
